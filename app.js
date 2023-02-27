@@ -12,7 +12,7 @@ var connection = mysql2.createConnection({
     // Your username
     user: "root",
     // Your password
-    password: "ikey2233",
+    password: "Kacku807!",
     database: "employees_db"
   });
 
@@ -297,7 +297,7 @@ viewDepartments = () => {
 };
 
 viewRoles = () => {
-  connection.query("SELECT  r.id, r.title, r.salary, d.name as Department_Name FROM role AS r INNER JOIN department AS d ON r.department_id = d.id", (err, res) => {
+  connection.query("SELECT r.id, r.title, r.salary, d.name as Department_Name FROM role AS r INNER JOIN department AS d ON r.department_id = d.id", (err, res) => {
     if (err) throw err;
     ('Roles', (err, result) => {
       console.log(err || result);
